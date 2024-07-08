@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/dashlite.css?ver=3.0.3">
+  <link id="skin-default" rel="stylesheet" href="/assets/css/theme.css?ver=3.0.3">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <style>
+    .is-light .nk-menu-link:hover,
+    .is-light .active>.nk-menu-link {
+      background: #b4543d;
+      color: #fff;
+    }
+
+    .nk-menu-link:hover .nk-menu-icon,
+    .nk-menu-item.active>.nk-menu-link .nk-menu-icon,
+    .nk-menu-item.current-menu>.nk-menu-link .nk-menu-icon {
+      color: #fff;
+    }
+
+    .is-light .nk-menu-link {
+      color: #1f2b3a;
+    }
+
+    .nk-menu-icon {
+      color: #1f2b3a;
+    }
+  </style>
+  <title>Vite + React</title>
+</head>
+
+<body className="nk-body bg-lighter npc-general has-sidebar ">
+
+  <div id="root"></div>
+
+  <script type="module" src="/src/main.jsx"></script>
+  <script src="/assets/js/bundle.js?ver=3.0.3"></script>
+  <script src="/assets/js/scripts.js?ver=3.0.3"></script>
+  <script src="/js/ph-address.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // Select the element you want to apply Select2 to, using its class or ID
+      // $('.js-select2').select2();
+      // $('.js-select1').select2();
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // Calculate the minimum date as January 1st, 2015
+    var minDate = new Date(2015, 0, 1); // Month is 0-based (0 = January)
+    
+    // Format the minimum date as required by the date picker (YYYY-MM-DD)
+    var minDateString = minDate.toISOString().split('T')[0];
+    
+    // Set the minimum attribute of the date picker input
+    //document.getElementById("outlined-date-picker").setAttribute("min", minDateString);
+});
+  </script>
+</body>
+
+</html>
