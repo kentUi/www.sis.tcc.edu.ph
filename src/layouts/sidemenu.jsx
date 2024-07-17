@@ -3,6 +3,11 @@ import { useState } from 'react'
 function LayoutSideMenu() {
     const [count, setCount] = useState(0)
 
+    function AuthLogout(){
+        localStorage.clear();        
+        window.location.href = '/'
+    }
+
     return (
         <>
             <div className="nk-sidebar nk-sidebar-fixed is-light " data-content="sidebarMenu">
@@ -34,47 +39,6 @@ function LayoutSideMenu() {
                                         <span className="nk-menu-text">Dashboard</span>
                                     </a>
                                 </li>
-                                {/* <li class="nk-menu-item has-sub">
-                                    <a href="#" class="nk-menu-link nk-menu-toggle" data-bs-original-title="" title="">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-tile-thumb-fill"></em></span>
-                                        <span class="nk-menu-text">Projects</span>
-                                    </a>
-                                    <ul class="nk-menu-sub">
-                                        <li class="nk-menu-item">
-                                            <a href="html/project-card.html" class="nk-menu-link" data-bs-original-title="" title=""><span class="nk-menu-text">Project Cards</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="html/project-list.html" class="nk-menu-link" data-bs-original-title="" title=""><span class="nk-menu-text">Project List</span></a>
-                                        </li>
-                                    </ul>
-                                </li> */}
-                                <li className="nk-menu-item">
-                                    <a href="/area" className="nk-menu-link">
-                                        <span className="nk-menu-icon"><em className="icon ni ni-calendar"></em></span>
-                                        <span className="nk-menu-text">Class Schedules</span>
-                                    </a>
-                                </li>
-                                <li className="nk-menu-item">
-                                    <a href="/coordinator" className="nk-menu-link">
-                                        <span className="nk-menu-icon"><em className="icon ni ni-template"></em></span>
-                                        <span className="nk-menu-text">Student Clearance</span>
-                                    </a>
-                                </li>
-                                <li className="nk-menu-item">
-                                    <a href="/winner" className="nk-menu-link">
-                                        <span className="nk-menu-icon"><em className="icon ni ni-file-docs"></em></span>
-                                        <span className="nk-menu-text">Academic Records</span>
-                                    </a>
-                                </li>
-                                <li className="nk-menu-item">
-                                    <a href="/digitsl" className="nk-menu-link">
-                                        <span className="nk-menu-icon"><em className="icon ni ni-money"></em></span>
-                                        <span className="nk-menu-text">Financial Records</span>
-                                    </a>
-                                </li>
-                                <li className="nk-menu-heading pt-3">
-                                    <h6 className="overline-title text-primary-alt">Others</h6>
-                                </li>
                                 <li className="nk-menu-item">
                                     <a href="/reset" className="nk-menu-link">
                                         <span className="nk-menu-icon"><em className="icon ni ni-folder-list"></em></span>
@@ -102,13 +66,13 @@ function LayoutSideMenu() {
                                     <h6 className="overline-title text-primary-alt">Settings</h6>
                                 </li>
                                 <li className="nk-menu-item">
-                                    <a href="/settings/change-password" className="nk-menu-link">
+                                    <a href="/settings" className="nk-menu-link">
                                         <span className="nk-menu-icon"><em className="icon ni ni-setting"></em></span>
-                                        <span className="nk-menu-text">Change Password</span>
+                                        <span className="nk-menu-text">Settings</span>
                                     </a>
                                 </li>
                                 <li className="nk-menu-item">
-                                    <a href="/logout" className="nk-menu-link">
+                                    <a href="#" onClick={AuthLogout} className="nk-menu-link">
                                         <span className="nk-menu-icon"><em className="icon ni ni-power"></em></span>
                                         <span className="nk-menu-text">Logout</span>
                                     </a>

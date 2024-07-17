@@ -3,6 +3,11 @@ import { useState } from 'react'
 function LayoutTop() {
     const [count, setCount] = useState(0)
 
+    function AuthLogout(){
+        localStorage.clear();        
+        window.location.href = '/'
+    }
+
     return (
         <>
             {/* style="border-top: 10px solid #ba2238" */}
@@ -265,7 +270,7 @@ function LayoutTop() {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/logout">
+                                                    <a href="#" onClick={AuthLogout}>
                                                         <span className="nk-menu-icon"><em className="icon ni ni-power"></em></span>
                                                         <span className="nk-menu-text">Logout</span>
                                                     </a>

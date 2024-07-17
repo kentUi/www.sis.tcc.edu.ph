@@ -29,6 +29,7 @@
     }
   </style>
   <title>Vite + React</title>
+
 </head>
 
 <body className="nk-body bg-lighter npc-general has-sidebar ">
@@ -47,16 +48,16 @@
       // $('.js-select1').select2();
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-    // Calculate the minimum date as January 1st, 2015
-    var minDate = new Date(2015, 0, 1); // Month is 0-based (0 = January)
-    
-    // Format the minimum date as required by the date picker (YYYY-MM-DD)
-    var minDateString = minDate.toISOString().split('T')[0];
-    
-    // Set the minimum attribute of the date picker input
-    //document.getElementById("outlined-date-picker").setAttribute("min", minDateString);
-});
+    document.addEventListener('DOMContentLoaded', function () {
+      // Calculate the minimum date as January 1st, 2015
+      var minDate = new Date(2015, 0, 1); // Month is 0-based (0 = January)
+
+      // Format the minimum date as required by the date picker (YYYY-MM-DD)
+      var minDateString = minDate.toISOString().split('T')[0];
+
+      // Set the minimum attribute of the date picker input
+      //document.getElementById("outlined-date-picker").setAttribute("min", minDateString);
+    });
   </script>
 </body>
 

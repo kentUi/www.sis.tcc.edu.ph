@@ -1,0 +1,137 @@
+@media screen {
+    .container {
+        flex-direction: row;
+    }
+
+    .column {
+        width: 50%;
+    }
+}
+
+@media print {
+    @page {
+        size: CR80;
+        margin: 0;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    img {
+        max-width: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .profile {
+        position: fixed;
+        height: 105px;
+        width: 105px;
+        top: 55px !important;
+        left: 55px !important;
+    }
+
+    .signature {
+        width: 100px !important;
+        position: absolute;
+        top: 225px !important;
+        z-index: 1;
+    }
+
+    .barcode {
+        position: absolute;
+        z-index: 1;
+        top: 220px !important;
+        height: 150px !important;
+        width: 100px !important;
+    }
+
+    .txt_input {
+        position: fixed;
+        z-index: 1;
+        left: -118px;
+        margin-bottom: 5px !important;
+    }
+
+    .txt_input_name {
+        position: fixed;
+        top: 172px !important;
+        z-index: 1;
+        color: #fff !important;
+        font-size: 10px !important;
+    }
+
+    .txt_input_course {
+        position: fixed;
+        top: 185px !important;
+        z-index: 1;
+        font-size: 10px !important;
+    }
+
+    .txt_input_sid {
+        position: fixed;
+        top: 202px !important;
+        z-index: 1;
+        left: 92px;
+        font-size: 7px !important;
+    }
+
+    .txt_input_gender {
+        position: fixed;
+        top: 213px !important;
+        z-index: 1;
+        left: 92px;
+        font-size: 7px !important;
+    }
+
+    .txt_input_birth {
+        position: fixed;
+        top: 223px !important;
+        z-index: 1;
+        left: 92px;
+        font-size: 7px !important;
+    }
+    
+
+    .qr-code {
+        position: fixed;
+        z-index: 1;
+        top: 375px !important;
+        left: 70px !important;
+        height: 75px !important;
+        width: 75px !important;
+    }
+    
+    .txt_input_3_cname {
+        position: fixed;
+        bottom: -154px !important;
+        left: 40px !important;
+        z-index: 1;
+        font-size: 7px !important;
+    }
+
+    .txt_input_3_crelation {
+        position: fixed;
+        bottom: -166px !important;
+        left: 59px !important;
+        z-index: 1;
+        font-size: 7px !important;
+    }
+
+    .txt_input_3_cphone {
+        position: fixed;
+        bottom: -178px !important;
+        left: 49px !important;
+        z-index: 1;
+        font-size: 7px !important;
+    }
+}
