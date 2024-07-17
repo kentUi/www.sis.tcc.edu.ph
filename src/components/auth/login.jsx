@@ -12,11 +12,11 @@ function Login() {
 
     const AuthLogin = async () => {
         try {
-            const response = await login.post('/login/', { username: '20231054', password: '12345!' });
+            //const response = await login.post('/login/', { username: '20231054', password: '12345!' });
 
             localStorage.setItem('token_id', '12345')
             window.location.href = '/dashboard'
-            
+
         } catch (error) {
             console.error('Error fetching information data:', error);
         }
