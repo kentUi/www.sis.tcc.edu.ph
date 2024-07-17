@@ -22,7 +22,12 @@ import DashboardActivityComponents from './components/dashboard/activities.jsx'
 function App() {
 
   const [count, setCount] = useState(0)
-  const token = localStorage.getItem('token_id')
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const storedToken = localStorage.getItem('token_id');
+    setToken(storedToken);
+  }, []);
 
   if (token == null) {
     return <Login />
